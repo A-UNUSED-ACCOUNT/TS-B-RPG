@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.7)
+project(tsbrpg VERSION 0.1)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_CXX_STANDARD 14)
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
+include_directories(./include/)
+add_executable(tsbrpg ./src/main.cpp)
+target_link_libraries(tsbrpg ${SDL2_LIBRARIES})
+
